@@ -1,0 +1,25 @@
+<html lang="pt-br">
+    <!--Incluindo partes EJS-->
+    <%- include('../partials/head'); %>
+   
+    <body class="d-flex flex-column h-100">
+        <%- include('../partials/header'); %>
+        <main class="container text-center">
+            <div class="row text-start">
+                <div class="col mt-5">
+                    <h1>Node com EJS</h1>
+                    <p>Vamos aprender a trabalhar com arquivos EJS</p>
+                </div>
+                <div class="col">                    
+                </div>
+            </div>
+            <ul><!--Usando forEach pra exibir array de objetos em uma ul-->
+                <% qualitys.forEach(function(quality){%>
+                    <!--<%= para exibir no HTMl-->
+                    <li class="text-start"><strong><%= quality.title %></strong><%= quality.message %></li>
+                <%})%>
+            </ul>
+        </main> 
+        <%- include('../partials/footer'); %>
+    </body>
+</html>
